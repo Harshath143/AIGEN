@@ -1,0 +1,23 @@
+
+
+{% block header %}
+    <h1>{% block title %}IAGEN{% endblock %}</h1>
+{% endblock %}
+<script>
+    function myFunction() {
+        document.getElementById("GFG").submit();
+    }
+</script>
+<link rel="stylesheet" href="{{ url_for('static', filename = 'style.css')}}">
+{% block content %}
+    <form method = "POST" id="GFG">
+        <label for="imgprompt">Image Prompt</label>
+        <input name="imgprompt" id="imgprompt">
+        <br>
+        <label for="audprompt">Audio Prompt</label>
+        <input type="text" name="audprompt" id="audprompt">
+        <br>
+        <!--<input class="button" type="submit" value="Submit"> -->
+        <a href = "#" onclick="myFunction()" class="button">Submit</a>
+    </form>
+{% endblock %}

@@ -1,0 +1,199 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+        <title>AIGEN</title>
+
+ <script>
+            function myFunction() {
+                document.getElementById("GFG").submit();
+            }
+ </script>
+<style>
+    
+  /* Center form and give it a border */
+    form {
+  max-width: 400px;
+}
+
+    /* Style form fields */
+    input[type=text] {
+      padding: 10px;
+      margin: 1px;
+      border: none;
+      border-radius: 3px;
+      background-color: #f2f2f2;
+      color: black;
+      width: 100%;
+    }
+    
+    /* Style form labels */
+    label {
+      display: block;
+      margin-bottom: 2px;
+    }
+    
+    /* Style error message */
+    .error {
+      color: red;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+  </style>
+    </head>
+    <body>
+
+        
+        <a href="#" class="scrolltop" id="scroll-top">
+            <i class='bx bx-chevron-up scrolltop__icon'></i>
+        </a>
+
+
+        <header class="l-header" id="header">
+            <nav class="nav bd-container">
+                <a href="#" class="nav__logo">AIGEN</a>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
+                        <li class="nav__item"><a href="#about" class="nav__link">About us</a></li>
+                        <li class="nav__item"><a href="#services" class="nav__link">Services</a></li>
+                        <li class="nav__item"><a href="#contact" class="nav__link">Contact us</a></li>
+                        <li><i class='bx bxs-moon change-theme' id="theme-button"></i></li>
+	      <li class="nav__item"><a href="#menu" class="nav__link">Login/Register</a></li>
+                    </ul>
+                </div>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-menu'></i>
+                </div>
+            </nav>
+        </header>
+
+        <main class="l-main">
+
+            <section class="home" id="home">
+                <div class="home__container bd-container bd-grid">
+                    <div class="home__data">
+                        <h1 class="home__title">AIGEN</h1>
+                        <p class="">to get the Customized Image and Music and Image generated respective to your Emotions</p> <br>
+<form method="post" id="GFG">
+    <label for="imgprompt">Image Prompt </label>
+    <input type="text" name="imgprompt" id="imgprompt">
+    <label for="audprompt">Music Prompt</label>
+    <input type="text" name="audprompt" id="audprompt" ><br><br>
+    <div class="error"></div>
+  </form><br>
+                        <a onclick="myFunction()" class="button">Submit</a>
+                    </div>
+    
+                    <img src="static/img/home.gif" alt="" class="home__img">
+                </div>
+            </section>
+            
+
+            <section class="about section bd-container" id="about">
+                <div class="about__container  bd-grid">
+                    <div class="about__data">
+                        <span class="section-subtitle about__initial">About us</span>
+                        <h2 class="section-title about__initial"></h2>
+                        <p class="about__description"></p>
+                        <a href="#" class="button">Explore history</a>
+                    </div>
+
+                    <img src="static/img/about.gif" alt="" class="about__img">
+                </div>
+            </section>
+
+            <section class="services section bd-container" id="services">
+                <span class="section-subtitle">Offering</span>
+                <h2 class="section-title">Our amazing services</h2>
+
+                <div class="services__container  bd-grid">
+                    <div class="services__content">
+                        <h3 class="services__title"></h3>
+                        <p class="services__description"></p>
+                    </div>
+
+                    <div class="services__content">
+                        <h3 class="services__title"></h3>
+                        <p class="services__description"></p>
+                    </div>
+
+                    <div class="services__content">
+                       
+                        <h3 class="services__title"></h3>
+                        <p class="services__description"></p>
+                    </div>
+                </div>
+            </section>
+
+            
+            <section class="contact section bd-container" id="contact">
+                <div class="contact__container bd-grid">
+                    <div class="contact__data">
+                        <span class="section-subtitle contact__initial">Let's talk</span>
+                        <h2 class="section-title contact__initial">Contact us</h2>
+                        <p class="contact__description">If you want to reserve a table in our restaurant, contact us and we will attend you quickly, with our 24/7 chat service.</p>
+                    </div>
+
+                    <div class="contact__button">
+                        <a href="#" class="button">Contact us now</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        
+        <footer class="footer section bd-container">
+            <div class="footer__container bd-grid">
+                <div class="footer__content">
+                    <a href="#" class="footer__logo">AIGEN</a>
+                    <span class="footer__description">Music and Image Generator based on Emotions</span>
+                    <div>
+                        <a href="https://github.com/JkAlcntr" class="footer__social"><i class='bx bxl-facebook'></i></a>
+                        <a href="https://github.com/JkAlcntr" class="footer__social"><i class='bx bxl-instagram'></i></a>
+                        <a href="https://github.com/JkAlcntr" class="footer__social"><i class='bx bxl-twitter'></i></a>
+                    </div>
+                </div>
+
+                <div class="footer__content">
+                    <h3 class="footer__title">Services</h3>
+                    <ul>
+                        <li><a href="#services" class="footer__link">Music Generator</a></li>
+                        <li><a href="#menu" class="footer__link">Image Generator</a></li>
+                        <li><a href="#" class="footer__link"></a></li>
+                        <li><a href="#contact" class="footer__link"></a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__content">
+                    <h3 class="footer__title">Information</h3>
+                    <ul>
+                        <li><a href="#contact" class="footer__link">Contact us</a></li>
+                        <li><a href="#" class="footer__link">Privacy policy</a></li>
+                        <li><a href="#" class="footer__link">Terms of services</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__content">
+                    <h3 class="footer__title">Address</h3>
+                    <ul>
+                        <li>Coimbatore</li>
+                        <li>+9876543210</li>
+                        <li>aigen@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+
+            <p class="footer__copy">&#169; Copyrights @AIGEN</p>
+        </footer>
+
+        <script src="https://unpkg.com/scrollreveal"></script>
+
+        <script type="text/javascript" src="{{ url_for('static', filename='js/main.js') }}"></script>
+    </body>
+</html>

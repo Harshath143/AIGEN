@@ -1,0 +1,178 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+        <title>AiGEN</title>
+        <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='img/mona-lisa.png') }}">
+
+ <script>
+            function myFunction() {
+                document.getElementById("img").submit();
+                
+
+            }
+ </script>
+<style>
+    
+  /* Center form and give it a border */
+    form {
+  max-width: 400px;
+}
+
+    /* Style form fields */
+    input[type=text] {
+      padding: 10px;
+      margin: 1px;
+      border: none;
+      border-radius: 3px;
+      background-color: #f2f2f2;
+      color: black;
+      width: 100%;
+    }
+    
+    /* Style form labels */
+    label {
+      display: block;
+      margin-bottom: 2px;
+    }
+    
+    /* Style error message */
+    .error {
+      color: red;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+  </style>
+    </head>
+    <body>
+
+        
+        <a href="#" class="scrolltop" id="scroll-top">
+            <i class='bx bx-chevron-up scrolltop__icon'></i>
+        </a>
+
+
+        <header class="l-header" id="header">
+            <nav class="nav bd-container">
+                <a href="home" class="nav__logo">AiGEN</a>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="home" class="nav__link active-link">Home</a></li>
+                        <li class="nav__item"><a href="disp" class="nav__link">Previous Generation</a></li>
+                        
+                    </ul>
+                </div>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-menu'></i>
+                </div>
+            </nav>
+        </header>
+
+        <main class="l-main">
+
+            <section class="home" id="home">
+                <div class="home__container bd-container bd-grid">
+                    <div class="home__data">
+                        <br> 
+                        <h1 class="home__title">AiGEN</h1>
+                        <p class="">to get the Customized Image and Music and Image generated respective to your Prompt</p> <br>
+                            <form method="post" id="img">
+                                <label for="imgprompt">Image Prompt </label>
+                                <input type="text" name="imgprompt" id="imgprompt" placeholder="">
+                                <label for="istyle">Style:</label>
+                                <select name="istyle" id="istyle" style="width: auto;" >
+                                    <option value="Modern art">Modern art</option>
+                                    <option value="Surrealism">Surrealism</option>
+                                    <option value="Minimalism">Minimalism</option>
+                                    <option value="Photorealism">Photorealism</option>
+                                    <option value="Abstract art">Abstract art</option>
+                                </select>
+                                
+                                  
+                                <div class="error"></div>
+                                <br>
+                                
+                                <label for="audprompt">Music Prompt</label>
+                                <input type="text" name="audprompt" id="audprompt" placeholder="" >
+                                <label for="astyle">Style:</label>
+                                <select name="astyle" id="astyle" style="width: auto;" >
+                                    <option value="Rock">Rock</option>
+                                    <option value="Hip hop">Hip hop</option>
+                                    <option value="Jazz">Jazz</option>
+                                    <option value="Heavy metal">Heavy metal</option>
+                                    <option value="Disco">Disco</option>
+                                </select>
+                                <div class="error"></div>
+                            </form>
+                            <br><br>
+                        <a onclick="myFunction()" class="button">Submit</a>
+                    </div>
+    
+                    
+                </div>
+            </section>
+
+
+            
+
+            
+            
+        </main>
+
+        
+        <footer class="footer section bd-container">
+            <div class="footer__container bd-grid">
+                <div class="footer__content">
+                    <a href="#" class="footer__logo">AIGEN</a>
+                    <span class="footer__description">Music and Image Generator based on Emotions</span>
+                    <div>
+                        <a href="https://github.com/JkAlcntr" class="footer__social"><i class='bx bxl-facebook'></i></a>
+                        <a href="https://github.com/JkAlcntr" class="footer__social"><i class='bx bxl-instagram'></i></a>
+                        <a href="https://github.com/JkAlcntr" class="footer__social"><i class='bx bxl-twitter'></i></a>
+                    </div>
+                </div>
+
+                <div class="footer__content">
+                    <h3 class="footer__title">Services</h3>
+                    <ul>
+                        <li><a href="#services" class="footer__link">Music Generator</a></li>
+                        <li><a href="#menu" class="footer__link">Image Generator</a></li>
+                        <li><a href="#" class="footer__link"></a></li>
+                        <li><a href="#contact" class="footer__link"></a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__content">
+                    <h3 class="footer__title">Information</h3>
+                    <ul>
+                        <li><a href="#contact" class="footer__link">Contact us</a></li>
+                        <li><a href="#" class="footer__link">Privacy policy</a></li>
+                        <li><a href="#" class="footer__link">Terms of services</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__content">
+                    <h3 class="footer__title">Address</h3>
+                    <ul>
+                        <li>Coimbatore</li>
+                        <li>+9876543210</li>
+                        <li>aigen@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+
+            <p class="footer__copy">&#169; Copyrights @AIGEN</p>
+        </footer>
+
+        <script src="https://unpkg.com/scrollreveal"></script>
+
+        <!--<script type="text/javascript" src="{{ url_for('static', filename='js/main.js') }}"></script>-->
+        <script type="text/javascript" src="{{ url_for('static', filename='js/main.js') }}"></script>
+    </body>
+</html>
